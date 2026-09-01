@@ -1,0 +1,41 @@
+{
+  "name": "genpark-dynamic-aspect-ratio-visual-patch-tokenizer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Dynamic aspect ratio visual patch tokenizer processing arbitrary image dimensions with 2D rotary position embeddings.",
+  "author": "genpark",
+  "category": "vision-language",
+  "tags": [
+    "qwen2.5-vl",
+    "visual-tokenizer",
+    "dynamic-aspect-ratio",
+    "2d-rope",
+    "multimodal-patches"
+  ],
+  "inputs": {
+    "image_width": {
+      "type": "integer"
+    },
+    "image_height": {
+      "type": "integer"
+    },
+    "patch_grid_stride": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "tokenization_id": {
+      "type": "string"
+    },
+    "patches_generated_count": {
+      "type": "integer"
+    },
+    "dynamic_aspect_ratio_preserved": {
+      "type": "boolean"
+    },
+    "token_compression_ratio": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
